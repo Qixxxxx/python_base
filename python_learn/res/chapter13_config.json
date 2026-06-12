@@ -1,0 +1,6 @@
+{
+  "project": "python_base",
+  "debug": true,
+  "version": "1.0",
+  "features": ["file", "os", "pathlib"]
+}
