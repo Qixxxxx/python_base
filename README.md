@@ -1,106 +1,118 @@
-# python_base — Python 基础学习笔记
+# python_base - Python 基础学习笔记
 
-> 📚 个人 Python 与数据科学基础学习仓库，从语法入门到 NumPy 数组操作，逐步夯实基础。
+这是一个面向 Python 初学者的个人学习笔记仓库，主要使用 Jupyter Notebook 记录 Python 基础语法、常用标准库、面向对象、异常处理、迭代器/生成器/装饰器、多线程与多进程，以及 NumPy 基础内容。
 
----
+当前 Python 基础部分已经整理完成，共 17 章。笔记以“概念说明 + 示例代码 + 详细中文注释 + 常见错误总结”为主，适合按章节顺序学习，也适合之后复习查阅。
 
-## 🎯 项目简介
+## 目录结构
 
-本项目是一个**系统化的 Python 基础学习笔记库**，以 Jupyter Notebook 为主要载体，记录 Python 核心语法、常用标准库以及 NumPy 数值计算的学习过程。所有内容面向初学者，代码与注释均使用中文，力求做到“每一行都有解释”。
-
-无论你是刚开始学 Python，还是想复习基础、查漏补缺，这里都希望能帮到你。
-
----
-
-## 📂 目录结构
-
-### 已完成 ✅
-
-```
+```text
 python_base/
-├── python_learn/          # Python 基础语法
-│   ├── python01.ipynb     # 数据类型、变量、格式化输出、列表、元组、字典、集合、字符串方法
-│   ├── python02.ipynb     # 流程控制（if / 循环）、函数、类与面向对象、异常处理
-│   ├── os_learn.ipynb     # 文件读写与 os / os.path 模块使用
-│   ├── test_1.txt         # 文件读写练习测试文件
-│   ├── test_2.txt         # 文件读写练习测试文件
-│   └── mkdir_test/
-│       └── create_file.txt# 目录操作练习测试文件
-│
-└── numpy_learn/           # NumPy 数组操作
-    ├── numpy01.ipynb      # 数组创建、属性查看、修改元素、切片与翻转
-    ├── numpy02.ipynb      # axis 概念、聚合统计、矩阵运算、广播机制、布尔索引、排序与去重
-    └── numpy03.ipynb      # 随机数生成
+├── README.md
+├── python_learn/
+│   ├── 1.数据类型.ipynb
+│   ├── 2.数据类型转换.ipynb
+│   ├── 3.注释使用.ipynb
+│   ├── 4.运算符.ipynb
+│   ├── 5.字符串.ipynb
+│   ├── 6.列表.ipynb
+│   ├── 7.元组.ipynb
+│   ├── 8.字典.ipynb
+│   ├── 9.集合.ipynb
+│   ├── 10.条件控制语句.ipynb
+│   ├── 11.循环结构.ipynb
+│   ├── 12.函数.ipynb
+│   ├── 13.文件读取写入和OS.ipynb
+│   ├── 14.面向对象编程.ipynb
+│   ├── 15.错误与异常.ipynb
+│   ├── 16.迭代器生成器和装饰器.ipynb
+│   ├── 17.Python多线程和多进程.ipynb
+│   └── res/
+│       ├── chapter13_text.txt
+│       ├── chapter13_students.csv
+│       ├── chapter13_config.json
+│       ├── chapter17_process_demo.py
+│       └── chapter13_workspace/
+└── numpy_learn/
+    ├── numpy01.ipynb
+    ├── numpy02.ipynb
+    └── numpy03.ipynb
 ```
 
-### 规划中 🚧
+## Python 基础章节
 
-| 模块 | 主题 | 计划内容 |
-|:---|:---|:---|
-| `python_learn/` | `python03.ipynb` | 迭代器、生成器、装饰器、上下文管理器 |
-| `python_learn/` | `python04.ipynb` | 正则表达式（re 模块） |
-| `python_learn/` | `python05.ipynb` | 常用标准库速查：datetime、json、collections、itertools |
-| `pandas_learn/` | `pandas01.ipynb` | Series 与 DataFrame 基础创建与索引 |
-| `pandas_learn/` | `pandas02.ipynb` | 数据清洗：缺失值处理、去重、类型转换 |
-| `pandas_learn/` | `pandas03.ipynb` | 数据筛选、分组聚合（groupby）、合并（merge / concat） |
-| `pandas_learn/` | `pandas04.ipynb` | 数据透视表、时间序列基础 |
-| `matplotlib_learn/` | `matplotlib01.ipynb` | 折线图、散点图、柱状图、直方图基础绘制 |
-| `matplotlib_learn/` | `matplotlib02.ipynb` | 图表美化：标题、标签、图例、子图布局 |
-| `advanced_python/` | `python_advance01.ipynb` | 面向对象进阶：魔术方法、属性描述符、元类简介 |
-| `advanced_python/` | `python_advance02.ipynb` | 并发基础：多线程、多进程、异步 IO（asyncio）入门 |
+| 章节 | 文件 | 主题 |
+| --- | --- | --- |
+| 1 | `1.数据类型.ipynb` | 常见数据类型、变量基础 |
+| 2 | `2.数据类型转换.ipynb` | 类型转换、输入输出中的类型处理 |
+| 3 | `3.注释使用.ipynb` | 单行注释、多行注释、注释规范 |
+| 4 | `4.运算符.ipynb` | 算术、比较、逻辑、赋值、成员运算符 |
+| 5 | `5.字符串.ipynb` | 字符串创建、索引切片、常用方法、格式化 |
+| 6 | `6.列表.ipynb` | 列表增删改查、排序、遍历、列表推导式 |
+| 7 | `7.元组.ipynb` | 元组创建、不可变特性、拆包 |
+| 8 | `8.字典.ipynb` | 字典增删改查、遍历、嵌套结构 |
+| 9 | `9.集合.ipynb` | 集合去重、交并差、成员判断 |
+| 10 | `10.条件控制语句.ipynb` | `if`、`if...else`、`if...elif...else`、`match...case` |
+| 11 | `11.循环结构.ipynb` | `for`、`while`、`range`、`break`、`continue`、循环嵌套 |
+| 12 | `12.函数.ipynb` | 函数定义、参数、返回值、作用域、`lambda`、闭包、递归 |
+| 13 | `13.文件读取写入和OS.ipynb` | 文件读写、CSV、JSON、`os`、`pathlib`、目录操作 |
+| 14 | `14.面向对象编程.ipynb` | 类和对象、属性、方法、封装、继承、多态、特殊方法 |
+| 15 | `15.错误与异常.ipynb` | 常见异常、`try...except`、`raise`、自定义异常 |
+| 16 | `16.迭代器生成器和装饰器.ipynb` | 迭代器、生成器、`yield`、装饰器 |
+| 17 | `17.Python多线程和多进程.ipynb` | 线程、线程池、锁、队列、进程池、多线程/多进程选择 |
 
----
+## 配套资源
 
-## 🛠️ 环境准备
+`python_learn/res/` 中保存了部分章节需要用到的示例文件：
 
-本项目基于 **Python 3** 与 **Jupyter Notebook**。
+| 文件/目录 | 用途 |
+| --- | --- |
+| `chapter13_text.txt` | 第 13 章文本读取示例 |
+| `chapter13_students.csv` | 第 13 章 CSV 读取和写入示例 |
+| `chapter13_config.json` | 第 13 章 JSON 读取和写入示例 |
+| `chapter13_workspace/` | 第 13 章代码运行时生成的练习输出目录 |
+| `chapter17_process_demo.py` | 第 17 章多进程示例脚本，适合在终端中运行 |
 
-### 1. 安装依赖
+## NumPy 笔记
+
+| 文件 | 主题 |
+| --- | --- |
+| `numpy01.ipynb` | NumPy 数组创建、属性查看、索引切片、形状调整 |
+| `numpy02.ipynb` | axis 概念、聚合统计、矩阵运算、广播、布尔索引、排序去重 |
+| `numpy03.ipynb` | 随机数生成基础 |
+
+## 环境准备
+
+建议使用 Python 3 和 Jupyter Notebook。
 
 ```bash
-# 建议先创建虚拟环境（可选）
-# python -m venv venv
-# source venv/bin/activate  # Linux/Mac
-# venv\Scripts\activate     # Windows
-
 pip install notebook numpy
-# 未来若增加 pandas、matplotlib 等内容：
-# pip install pandas matplotlib
 ```
 
-### 2. 启动 Jupyter
+启动 Jupyter：
 
 ```bash
 jupyter notebook
 ```
 
-然后在浏览器中打开对应的 `.ipynb` 文件，即可逐单元运行学习。
+然后在浏览器中打开对应的 `.ipynb` 文件，按单元格顺序运行学习。
 
----
+## 学习建议
 
-## 💡 学习建议
+1. 按 `1` 到 `17` 的顺序学习 Python 基础，先打牢语法，再进入 NumPy。
+2. 每个 Notebook 建议亲自运行一遍，并尝试修改变量值观察输出变化。
+3. 第 13 章涉及文件写入、重命名、删除等操作，建议只在配套的 `res/chapter13_workspace/` 中练习。
+4. 第 17 章多进程示例在 Windows/Jupyter 环境中可能不适合直接在 Notebook 内运行，推荐运行 `res/chapter17_process_demo.py`。
+5. 学习时可以在原 Notebook 下方新增自己的实验单元，保留错误和修正过程，这会比只看最终答案更有帮助。
 
-1. **顺序学习**：`python01` → `python02` → `os_learn`，打牢语法基础后再进入 NumPy。
-2. **边学边练**：每个 Notebook 都建议亲自运行一遍，修改参数观察结果变化。
-3. **做笔记**：可以在已有单元格下方新增自己的理解和实验，形成属于你的笔记。
-4. **善用输出**：Notebook 中保留了部分执行输出，可先观察输出，再对照代码理解逻辑。
-
----
-
-## 📌 更新日志
+## 当前进度
 
 | 日期 | 内容 |
-|:---|:---|
-| 2024-XX | 创建仓库，完成 `python01` ~ `python02` |
-| 2024-XX | 新增 `os_learn`，补充文件与目录操作 |
-| 2024-XX | 新增 `numpy01` ~ `numpy03`，完成 NumPy 基础篇 |
+| --- | --- |
+| 2026-06-12 | 完成 Python 基础 1-17 章学习笔记 |
+| 2026-06-12 | 补充第 13 章文件读写、OS 常用方法表和配套资源 |
+| 2026-06-12 | 保留 NumPy 基础 3 个 Notebook |
 
----
+## License
 
-## 📄 License
-
-本仓库为个人学习笔记，内容仅供参考交流，欢迎 Star & Fork。
-
----
-
-> 🚀 **学无止境，日拱一卒。** 如果你也在学习 Python，欢迎一起交流进步！
+本仓库为个人学习笔记，内容仅供学习、复习和交流参考。
